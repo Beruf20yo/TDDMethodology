@@ -18,5 +18,11 @@ class PhoneBookTest {
         String answer = phoneBook.findByNumber("+79164381345");
         Assertions.assertEquals("Rin",answer);
     }
+    @Test
+    void findByNameTest(){
+        phoneBook.add("Rin","+79164381345");
+        String answer = phoneBook.findByNumber("Rin");
+        Assertions.assertEquals("+79164381345",answer);
+    }
 
 }
