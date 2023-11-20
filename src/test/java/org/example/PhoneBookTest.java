@@ -4,6 +4,8 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 class PhoneBookTest {
     PhoneBook phoneBook = new PhoneBook();
 
@@ -27,8 +29,9 @@ class PhoneBookTest {
     @Test
     void printAllNamesTest(){
         phoneBook.add("Rin","+79164381345");
-        String answer = phoneBook.printAllNames();
-        Assertions.assertEquals("Rin",answer);
+        phoneBook.add("Accotsu","+79164399999");
+        List<String> answer = phoneBook.printAllNames();
+        Assertions.assertEquals(List.of("Accotsu","Rin"),answer);
     }
 
 }
