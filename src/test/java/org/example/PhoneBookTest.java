@@ -1,12 +1,16 @@
 package org.example;
 
-import org.junit.Assert;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 class PhoneBookTest {
     PhoneBook phoneBook = new PhoneBook();
+
+    @Test
     void addTest(){
         int answer = phoneBook.add("Rin","+79164381345");
-        Assert.assertEquals(1,answer);
+        Assertions.assertEquals(1,answer);
     }
 
 }
